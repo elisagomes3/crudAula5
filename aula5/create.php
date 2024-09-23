@@ -12,7 +12,7 @@ $sql = "INSERT INTO aulas (id_aula, sala , local , capacidade) VALUES ('$id_aula
 
 
 if ($conn->query($sql) === true) {
-    echo "Novo registro"; 
+    echo "Novo registro adicionado com sucesso!"; 
 } else{
     echo "Erro:" . $sql . "<br>" . $conn -> error;
 }
@@ -22,6 +22,7 @@ $conn -> close();
 ?>
 
 <form method="post" action="create.php">
+    ID Aula: <input type="number" name="id_aula" required><br>
     Sala: <input type="number" sala="sala" required>
     Local: <input type="text" local="local" required>
     Capacidade: <input type="text" capacidade="capacidade" required>
