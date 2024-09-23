@@ -23,11 +23,11 @@ $conn -> close();
 
 <form method="post" action="create.php">
     ID Aula: <input type="number" name="id_aula" required><br>
-    Sala: <input type="number" sala="sala" required>
-    Local: <input type="text" local="local" required>
-    Capacidade: <input type="text" capacidade="capacidade" required>
+    Sala: <input type="number" sala="sala" required><br>
+    Local: <input type="text" local="local" required><br>
+    Capacidade: <input type="text" capacidade="capacidade" required><br>
     <input type="submit" value="Adicionar aula">
 
 </form>
 
-<a href="">Ver Registros das aulas.</a>
+<a href="read.php">Ver Registros das aulas.</a>
