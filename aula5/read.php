@@ -39,7 +39,6 @@ $conn -> close();
     <title>Document</title>
 </head>
 <body>
-<a href="create.php">Inserir novo .</a>
 <br>
     
 </body>
