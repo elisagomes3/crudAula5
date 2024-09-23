@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $local = $_POST['local'];
     $capacidade = $_POST['capacidade'];
 
-    $sql = "UPDATE user SET sala='$sala', local='$local', capacidade='$capacidade' WHERE id=$id_aula";
+    $sql = "UPDATE user SET sala='$sala', local='$local', capacidade='$capacidade' WHERE id_aula=$id_aula";
 
     if ($conn->query($sql) === TRUE) {
         echo "Novo registro adicionado";
