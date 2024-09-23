@@ -41,7 +41,6 @@ $conn -> close();
 <body>
 <a href="create.php">Inserir novo .</a>
 <br>
-<a href="delete.php">Excluir</a>
     
 </body>
 </html>
