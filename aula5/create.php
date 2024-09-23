@@ -13,7 +13,7 @@ $sql = "INSERT INTO aulas (id_aula, sala , local , capacidade) VALUES ('$id_aula
 
 
 if ($conn->query($sql) === true) {
-    echo "Novo registro"; 
+    echo "Novo registro adicionado com sucesso!"; 
 } else{
     echo "Erro:" . $sql . "<br>" . $conn -> error;
 }

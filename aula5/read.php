@@ -12,6 +12,7 @@ if($result -> num_rows > 0) {
     <th>Sala</th>
     <th>Local</th>
     <th>Capacidade</th>
+    <th>Ações</th>
     </tr>";
 
     while($row = $result -> fetch_assoc()){
