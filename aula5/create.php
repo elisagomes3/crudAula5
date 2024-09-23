@@ -1,21 +1,24 @@
 <?php
+include 'db.php';
 
-if ($_SERVER ['REQUEST_METHOD']) == 'POST' {
+if ($_SERVER ['REQUEST_METHOD'] == 'POST') {
     $id_aula = $_POST ['id_aula'];
     $sala= $_POST ['sala'];
     $local = $_POST ['local'];
     $capacidade = $_POST ['capacidade'];
-}
 
-$sql = "INSERT INTO user (id_aula, sala , local , capaciade)";
 
-if ($conn -> query($sql) === true) {
+$sql = "INSERT INTO aulas (id_aula, sala , local , capacidade) VALUES ('$id_aula' , '$sala', '$local', '$capacidade')";
+
+
+if ($conn->query($sql) === true) {
     echo "Novo registro"; 
 } else{
-    echo "Erro:" . $sql . "<br"> . $conn -> error;
+    echo "Erro:" . $sql . "<br>" . $conn -> error;
 }
  
 $conn -> close();
+}
 ?>
 
 <form method="post" action="create.php">

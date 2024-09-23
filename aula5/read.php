@@ -16,18 +16,18 @@ if($result -> num_rows > 0) {
 
     while($row = $result -> fetch_assoc()){
         echo "<tr>
-        <td>{$row['id_aula']</td>
-        <td>{$row['sala']</td>
-        <td>{$row['local']</td>
-        <td>{$row['capacidade']</td>
+        <td>{$row['id_aula']}</td>
+        <td>{$row['sala']}</td>
+        <td>{$row['local']}</td>
+        <td>{$row['capacidade']}</td>
         </td>
         </tr>";
     }
 echo "</table>";
 }else{
     echo "Nenhum registro encontrado.".
-}
-$conn -> close();
 
+$conn -> close();
+}
 ?>
 <a href="create.php">Inserir novo registro.</a>
