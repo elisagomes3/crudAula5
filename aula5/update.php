@@ -1,7 +1,7 @@
 <?php
 include 'db.php';
 
-$id_aula = $_GET['id'];
+$id_aula = $_GET['id_aula'];
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $local = $_POST['local'];
     $capacidade = $_POST['capacidade'];
 
-    $sql = "UPDATE user SET sala='$sala', local='$local', capacidade='$capacidade' WHERE id_aula=$id_aula";
+    $sql = "UPDATE aulas SET sala='$sala', local='$local', capacidade='$capacidade' WHERE id_aula=$id_aula";
 
     if ($conn->query($sql) === TRUE) {
         echo "Novo registro adicionado";
@@ -22,7 +22,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit();
 }
 
-$sql = "SELECT * FROM user WHERE id_aula=$id_aula";
+$sql = "SELECT * FROM aulas WHERE id_aula=$id_aula";
 $result = $conn -> query($sql);
 $row = $result -> fetch_assoc();
 
@@ -36,7 +36,7 @@ $row = $result -> fetch_assoc();
     <title>Document</title>
 </head>
 <body>
-    <form method="POST" action=" update.php?id=<?php echo $row['id_aula'];?>">
+    <form method="POST" action=" update.php?id_aula=<?php echo $row['id_aula'];?>">
     <label for="sala">Sala</label>
     <input type="number" name="sala" value="<?php echo $row['sala']; ?>" required>
     <label for="local">Local</label>
