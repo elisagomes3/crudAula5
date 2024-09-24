@@ -35,6 +35,7 @@ if($_SERVER ['REQUEST_METHOD'] == 'POST') {
     Idade: <input type="number" name="idade" required><br>
     Matéria Professor: <input type="text" name="materia" required><br>
     <input type="submit" value="Adicionar usuário">
+    <a href="readProfessor.php">Ver registros</a>
 
 </form>
 </body>
