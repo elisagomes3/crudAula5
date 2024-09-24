@@ -3,6 +3,10 @@ h1{
     color: cadetblue;
 }
 
-a{
-    
+button{
+    background-color: cadetblue;
+    color: aliceblue;
+    padding: 16px 42px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 12px -2px
 }
