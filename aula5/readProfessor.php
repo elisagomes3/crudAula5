@@ -23,7 +23,7 @@ if($result -> num_rows > 0) {
         <td>{$row['materia']}</td>
         <td>
         <a href='updateProfessor.php?id_professor={$row['id_professor']}'>Editar</a> |
-        <a href='deleteProfessor.php?id_professor={$row['id_professor']}'>Excluir</a>
+        <a href='javascript:void(0);' onclick='confirmDelete({$row['id_professor']});'>Excluir</a>
         </td>
         </tr>";
     }
@@ -35,6 +35,15 @@ $conn -> close();
 }
 
 ?>
+
+<script>
+function confirmDelete(id) {
+    if (confirm("Você tem certeza que deseja excluir este registro?")) {
+        window.location.href = 'delete.php?id_professor=' + id; 
+    }
+}
+</script>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
