@@ -24,8 +24,8 @@ if($result -> num_rows > 0) {
         <td>{$row['capacidade']}</td>
         <td>{$row['materia']}</td>
         <td>
-        <a href='update.php?id={$row['id_aula']}'>Editar</a> |
-        <a href='delete.php?id={$row['id_aula']}'>Excluir</a>
+        <a href='update.php?id_aula={$row['id_aula']}'>Editar</a> |
+        <a href='delete.php?id_aula={$row['id_aula']}'>Excluir</a>
         </td>
         </tr>";
     }

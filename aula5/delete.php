@@ -1,19 +1,25 @@
 <?php
 include 'db.php';
 
-$id_aula = $_GET['id_aula'];
+if (isset($_GET['id_aula'])) {
+    $id_aula = intval($_GET['id_aula']); 
 
-$sql = "DELETE FROM aulas WHERE id_aula=$id_aula";
+    
+    $sql = "DELETE FROM aulas WHERE id_aula = $id_aula";
 
-if ($conn->query($sql) === TRUE) {
-    echo "Registro excluído com sucesso";
+    if ($conn->query($sql) === TRUE) {
+        echo "Registro excluído com sucesso.";
+    } else {
+        echo "Erro: " . $sql . "<br>" . $conn->error;
+    }
 } else {
-    echo "Erro: " . $sql . "<br>" . $conn->error;
+    echo "ID da aula não fornecido."; 
 }
 
-$conn -> close();
 
-header ("Location: read.php");
+$conn->close();
+
+
+header("Location: read.php");
 exit();
-
 ?>
