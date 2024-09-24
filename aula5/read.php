@@ -56,7 +56,8 @@ function confirmDelete(id) {
     }
 }
 </script>
-
+<br>
+<button type="button" onclick="window.location.href='index.html';" class="registros">Voltar a página inicial</button>  
 </body>
 </html>
 

@@ -38,6 +38,7 @@ $conn -> close();
     <br>
     <input type="submit" value="Adicionar aula" class="adicionar">
     <button type="button" onclick="window.location.href='read.php';" class="registros">Ver registros</button> 
+    <button type="button" onclick="window.location.href='index.html';" class="registros">Voltar a página inicial</button> 
 </form>
 
 </body>
