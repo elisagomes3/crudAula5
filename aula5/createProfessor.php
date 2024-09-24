@@ -3,12 +3,11 @@
 include 'db.php';
 
 if($_SERVER ['REQUEST_METHOD'] == 'POST') {
-    $id_professor = $_POST ['id_professor'] ?? null;
     $nome = $_POST ['nome']?? null;
     $idade = $_POST ['idade']?? null;
     $materia = $_POST ['materia']?? null;
 
-    $sql = "INSERT INTO professores (id_professor, nome , idade , materia) VALUES ('$id_professor' , '$nome', '$idade', '$materia')";
+    $sql = "INSERT INTO professores (nome , idade , materia) VALUES ('$nome', '$idade', '$materia')";
 
 
     if ($conn->query($sql) === TRUE) {
@@ -30,7 +29,6 @@ if($_SERVER ['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
 <form method="post" action="createProfessor.php">
-    ID Professor: <input type="text" name="id_professor" required><br>
     Nome: <input type="text" name="nome" required><br>
     Idade: <input type="number" name="idade" required><br>
     Matéria Professor: <input type="text" name="materia" required><br>
