@@ -20,14 +20,27 @@ if ($conn->query($sql) === TRUE) {
 $conn -> close();
 }
 ?>
-
-<form method="post" action="create.php">
-    Sala: <input type="number" name="sala" required><br>
-    Local: <input type="text" name="local" required><br>
-    Capacidade: <input type="text" name="capacidade" required><br>
-    Matéria: <input type="text" name="materia" required><br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Aula</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <form method="post" action="create.php">
+    <h1>Criar uma Aula:</h1>
+    Sala: <input type="number" name="sala" required><br><br>
+    Local: <input type="text" name="local" required><br><br>
+    Capacidade: <input type="text" name="capacidade" required><br><br>
+    Matéria: <input type="text" name="materia" required><br><br>
+    <br>
     <input type="submit" value="Adicionar aula">
 
 </form>
+<button type="button" onclick="window.location.href='read.php';" class="registros">Ver registros</button> 
+</body>
+</html>
 
-<a href="read.php">Ver Registros das aulas.</a
+
