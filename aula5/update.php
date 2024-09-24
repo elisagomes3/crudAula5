@@ -1,7 +1,7 @@
 <?php
 include 'db.php';
 
-$id_aula = $_GET['id_aula'];
+$id_aula = $_GET['id'];
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -36,13 +36,13 @@ $row = $result -> fetch_assoc();
     <title>Document</title>
 </head>
 <body>
-    <form method="POST" action=" update.php?id=<?php echo $row['id'];?>">
+    <form method="POST" action=" update.php?id=<?php echo $row['id_aula'];?>">
     <label for="sala">Sala</label>
-    <input type="number" sala="sala" value="<?php echo $row['sala']; ?>" required>
+    <input type="number" name="sala" value="<?php echo $row['sala']; ?>" required>
     <label for="local">Local</label>
-    <input type="text" sala="local" value="<?php echo $row['local']; ?>" required>
+    <input type="text" name="local" value="<?php echo $row['local']; ?>" required>
     <label for="capacidade">Capacidade</label>
-    <input type="text" capacidade="capacidade" value="<?php echo $row['capacidade']; ?>" required>
+    <input type="text" name="capacidade" value="<?php echo $row['capacidade']; ?>" required>
     <input type="submit" value="Atualizar">
 </form>
 
