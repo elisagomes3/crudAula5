@@ -36,10 +36,10 @@ $conn -> close();
     Capacidade: <input type="text" name="capacidade" required><br><br>
     Matéria: <input type="text" name="materia" required><br><br>
     <br>
-    <input type="submit" value="Adicionar aula">
-
+    <input type="submit" value="Adicionar aula" class="adicionar">
+    <button type="button" onclick="window.location.href='read.php';" class="registros">Ver registros</button> 
 </form>
-<button type="button" onclick="window.location.href='read.php';" class="registros">Ver registros</button> 
+
 </body>
 </html>
 

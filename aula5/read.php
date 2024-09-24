@@ -1,3 +1,14 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Registros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<br>
+
 <?php
 include 'db.php';
 
@@ -37,6 +48,7 @@ $conn -> close();
 }
 
 ?>
+
 <script>
 function confirmDelete(id) {
     if (confirm("Você tem certeza que deseja excluir este registro?")) {
@@ -45,15 +57,6 @@ function confirmDelete(id) {
 }
 </script>
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<br>
-    
 </body>
 </html>
 

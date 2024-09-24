@@ -39,7 +39,7 @@ $conn -> close();
 <script>
 function confirmDelete(id) {
     if (confirm("Você tem certeza que deseja excluir este registro?")) {
-        window.location.href = 'delete.php?id_professor=' + id; 
+        window.location.href = 'deleteProfessor.php?id_professor=' + id; 
     }
 }
 </script>
