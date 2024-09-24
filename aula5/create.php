@@ -32,4 +32,4 @@ $conn -> close();
 
 </form>
 
-<a href="read.php">Ver Registros das aulas.</a>
+<a href="read.php">Ver Registros das aulas.</a
