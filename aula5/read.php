@@ -12,6 +12,7 @@ if($result -> num_rows > 0) {
     <th>Sala</th>
     <th>Local</th>
     <th>Capacidade</th>
+    <th>Matéria</th>
     <th>Ações</th>
     </tr>";
 
@@ -21,6 +22,7 @@ if($result -> num_rows > 0) {
         <td>{$row['sala']}</td>
         <td>{$row['local']}</td>
         <td>{$row['capacidade']}</td>
+        <td>{$row['materia']}</td>
         <td>
         <a href='update.php?id={$row['id_aula']}'>Editar</a> |
         <a href='delete.php?id={$row['id_aula']}'>Excluir</a>
