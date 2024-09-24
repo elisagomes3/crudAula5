@@ -30,7 +30,7 @@ if($_SERVER ['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
 <form method="post" action="createProfessor.php">
-    ID Professor: <input type="number" name="id_professor" required><br>
+    ID Professor: <input type="text" name="id_professor" required><br>
     Nome: <input type="text" name="nome" required><br>
     Idade: <input type="number" name="idade" required><br>
     Matéria Professor: <input type="text" name="materia" required><br>
